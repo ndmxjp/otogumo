@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>OtoGumo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <style media="screen">
+      header{
+          width:100%;
+          height:18em;
+          position:fixed;
+          background:white;
+          z-index:100;
+          top:0;
+      }
+
+      footer {
+        /* containerからの絶対位置を定義 */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 2em;
+        background: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>OtoGumo</h1>
+
+      <div class="row">
+        <iframe width="100%" height="166" scrolling="no" frameborder="no"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;">
+        </iframe>
+      </div>
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#tab1" data-toggle="tab">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tab2" data-toggle="tab">Playlist</a>
+        </li>
+      </ul>
+
+    </header>
+    <div class="tab-content" style="margin-top:18em;">
+
+      <div class="tab-pane active" id="tab1">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for..." id="input-txt">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" id="search-btn">Search</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <!-- <li class="list-group-item">Vestibulum at eros</li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">お知らせ</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Playlistに追加しました</p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tab-pane" id="tab2">
+        <!-- <div class="container">
+          <ul id="playlist"></ul>
+        </div> -->
+        <div class="container">
+
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>image</th>
+                <th>title</th>
+                <th>button</th>
+              </tr>
+            </thead>
+            <tbody id="playlist">
+              <!-- <tr　class="active">
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+
+      <div class="mx-auto" style="width: 300px;">
+        <span>
+          <button type="button" class="btn btn-default play-btn" aria-label="Left Align">
+            <span class="ion-play" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="btn btn-default stop-btn">
+            <span class="ion-stop" aria-hidden="true"></span>
+          </button>
+
+        </span>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/application.js"></script>
+  </body>
+</html>
