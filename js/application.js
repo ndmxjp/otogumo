@@ -112,7 +112,7 @@ $(document).ready(function(){
       $(e).removeClass('table-active');
     });
 
-    $('tr').each(function(idex, e){
+    $('tr').each(function(idx, e){
       $(e).removeClass('table-active');
     });
   }
@@ -177,9 +177,10 @@ $(document).ready(function(){
   widget.bind(SC.Widget.Events.FINISH, function(){
     next_track = player.getNextTrack();
     if (player.state == Mode.loop) {
+      removeClassTableActive();
+
       widget.load(next_track.uri, {auto_play: true});
     }
   });
-
 
 });
